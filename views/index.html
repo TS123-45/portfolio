@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo" id="nav-logo">/portfolio</span>
+    <div class="nav-links">
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#education">education</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">GET /api/portfolio</p>
+      <h1 id="hero-name">Loading&hellip;</h1>
+      <p class="hero-role" id="hero-role"></p>
+      <p class="hero-bio" id="hero-bio"></p>
+      <div class="hero-links" id="hero-links"></div>
+    </div>
+
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="terminal-title">request&nbsp;&mdash;&nbsp;zsh</span>
+      </div>
+      <div class="terminal-body">
+        <div id="term-log" class="term-log"></div>
+        <div class="term-status" id="term-status"></div>
+        <button class="raw-toggle" id="raw-toggle" style="display:none;">view raw response</button>
+        <pre class="raw-json" id="raw-json" hidden></pre>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="endpoint" id="projects">
+    <div class="endpoint-head">
+      <span class="method" data-accent="mint">GET</span>
+      <span class="path">/api/projects</span>
+    </div>
+    <h2>Projects</h2>
+    <div class="grid" id="projects-grid"></div>
+  </section>
+
+  <section class="endpoint" id="experience">
+    <div class="endpoint-head">
+      <span class="method" data-accent="amber">GET</span>
+      <span class="path">/api/experience</span>
+    </div>
+    <h2>Experience</h2>
+    <div class="timeline" id="experience-list"></div>
+  </section>
+
+  <section class="endpoint" id="skills">
+    <div class="endpoint-head">
+      <span class="method" data-accent="violet">GET</span>
+      <span class="path">/api/skills</span>
+    </div>
+    <h2>Skills</h2>
+    <div class="chips" id="skills-list"></div>
+  </section>
+
+  <section class="endpoint" id="education">
+    <div class="endpoint-head">
+      <span class="method" data-accent="rose">GET</span>
+      <span class="path">/api/education</span>
+    </div>
+    <h2>Education</h2>
+    <div class="stack" id="education-list"></div>
+  </section>
+
+  <section class="endpoint" id="certifications">
+    <div class="endpoint-head">
+      <span class="method" data-accent="mint">GET</span>
+      <span class="path">/api/certifications</span>
+    </div>
+    <h2>Certifications</h2>
+    <div class="stack" id="certifications-list"></div>
+  </section>
+
+  <section class="endpoint" id="contact">
+    <div class="endpoint-head">
+      <span class="method" data-accent="amber">GET</span>
+      <span class="path">/api/social-links</span>
+    </div>
+    <h2>Contact</h2>
+    <div class="chips" id="links-list"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p id="footer-note">rendered from a live response &mdash; <span id="footer-status">connecting&hellip;</span></p>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
